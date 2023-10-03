@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+:root {
+    --prim-orange: hsl(31, 77%, 52%);
+    --prim-cyan: hsl(184, 100%, 22%);
+    --prim-dark-cyan: hsl(179, 100%, 13%);
+    --neu-white: hsla(0, 0%, 100%, 0.75);
+    --neu-gray: hsl(0, 0%, 95%);
+
+    --gray: #999;
+    --dark-gray: #555;
+    --black: #000;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: "Lexend Deca", sans-serif;
+    background-color: var(--neu-gray);
+    font-size: 15px;
+    overflow: hidden;
+    display: flex;
+    height: 100vh;
+    overflow: auto;
+    /* color: var(--neu-white); */
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+article {
+    max-width: 280px; 
+    height: 450px;
+    padding: 40px 30px;
+    position: relative;
+}
+
+img {
+    margin-left: 2px;
+}
+
+h1 {
+    margin-top: 20px;
+    font-family: "Big Shoulders Display", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--neu-gray);
+    margin-bottom: 1.5rem;
+}
+
+article p {
+    margin-top: 30px;
+    color: var(--neu-gray);
+    line-height: 25px;
+
+}
+
+button {
+    margin: 70px 40px;
+    width: 60%;
+    height: 10%;
+    border-radius: 20px;
+    border: none;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.sedan button {
+    color: var(--prim-orange);
+    background-color: var(--neu-gray);
+}
+
+.suv button {
+    color: hsl(184, 100%, 22%);
+    background-color: var(--neu-gray);
+}
+
+.luxury button {
+    color: hsl(179, 100%, 13%);
+    background-color: var(--neu-gray);
+}
+
+button:hover {
+    background-color: transparent;
+    color: var(--neu-gray);
+
+}
+
+article.sedan {
+    background-color: var(--prim-orange);
+    border-radius: 10px 0 0 10px;
+
+}
+
+article.suv {
+    background-color: hsl(184, 100%, 22%);
+
+}
+
+article.luxury {
+    background-color: hsl(179, 100%, 13%);
+    border-radius: 0 10px 10px 0;
+
+}
+
+.last-section {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    color: var(--gray);
+    bottom: 10px;
+    font-size: 0.75rem;
+    line-height: 30px;
+    text-align: center;
+}
+
+.last-section a {
+    text-decoration: none;
+}
+
+.last-section a:hover {
+    color: var(--black);
+}
+@media only screen and (max-width: 844px) {
+    body {
+        display: flex; 
+        width: 100%;
+        overflow: scroll; 
+         flex-wrap: wrap; 
+      }
+      main{
+        margin: 30px 0px;
+      }
+      article.sedan {
+        border-radius: 10px 10px  0px 0px;
+    
+    }
+    article.luxury{
+        border-radius: 0px 0px 10px 10px;
+    }
+    .last-section{
+        position: relative;
+        width: auto;
+        padding-bottom: 10px;
+    }
+}
